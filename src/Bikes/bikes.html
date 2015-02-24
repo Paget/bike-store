@@ -1,0 +1,19 @@
+<div>
+  <table>
+    <tr ng-repeat="bike in vm.all()">
+      <td>
+        {{bike.promo}}
+      </td>
+      <td ng-repeat="bike in bike.lineItems">
+        {{bike.description}}
+      </td>
+      <td>
+        {{bike.total | currency}}
+      </td>
+      <td>
+        <button ng-click="vm.removeBike(bike)">X</button>
+      </td>
+    </tr>
+  </table>
+  <a href="#/bikes/new">+ New Promo</a>
+</div>

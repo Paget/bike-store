@@ -1,0 +1,43 @@
+<h1>Daily Promo <input ng-model="vm.bike.promo"></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Description
+      </th>
+      <th colspan="2">
+        Cost
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="line in vm.bike.lineItems">
+      <td>
+        <input ng-model="line.description">
+      </td>
+      <td>
+        <input type="number" ng-model="line.cost">
+      </td>
+      <td>
+        <button ng-click="vm.bike.deleteLineItem(line)">X</button>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>
+        Total
+      </td>
+      <td>
+        {{vm.bike.total | currency}}
+      </td>
+      <td>
+        <button ng-click="vm.bike.addLineItem()">+</button>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+<button ng-click="vm.doneEditing()">Done</button>
+<button ng-click="vm.cancelEditing()">Cancel</button>
