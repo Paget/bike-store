@@ -7,7 +7,7 @@ app.factory('Bike', function () {
     spec = spec || {};
 
     var self = {
-      promo: spec.promo || 'Unknown Promo',
+      promo: spec.promo,
 
       lineItems: spec.lineItems || [LineItem()],
 
@@ -47,8 +47,8 @@ app.factory('Bike', function () {
     spec = spec || {};
 
     return {
-      description: spec.description || 'Enter description',
-      cost: spec.cost || 0
+      description: spec.description,
+      cost: spec.cost
     };
   }
 
