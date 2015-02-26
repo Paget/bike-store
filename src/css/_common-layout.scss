@@ -34,6 +34,10 @@ input, textarea {
   padding: 0.25em;
 }
 
+.weather + .wrapper {
+  clear: both;
+}
+
 .wrapper {
   background: #69dfd3;
   height: 30em;
@@ -41,8 +45,12 @@ input, textarea {
 
 .edit-page-header {
   font-family: 'Playfair Display', serif;
+  float: left;
 }
 
+.weather {
+  float: right;
+}
 // .toolbar {
 //   background: #F4F4F4;
 //   padding: 1em;
@@ -69,17 +77,17 @@ input, textarea {
 //   transform: rotate(-10deg);
 // }
 //
-// .main-nav-link {
-//   display: inline-block;
-//   padding: 1em 1em;
-//   color: inherit;
-// }
-//
-// .main-nav-link:hover {
-//   background: $alt-accent-color;
-//   color: inherit;
-// }
-//
-// .main-nav-link.active {
-//   background: #4d5196;
-// }
+.main-nav-link {
+  display: inline-block;
+  padding: 1em 1em;
+  color: inherit;
+}
+
+.main-nav-link:hover {
+  background: $alt-accent-color;
+  color: inherit;
+}
+
+.main-nav-link.active {
+  background: #4d5196;
+}
